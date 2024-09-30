@@ -1,0 +1,184 @@
+.ct_size_icon {
+  max-height: 40px;
+  height: 100%;
+}
+
+.GioiThieu_title__Jf3Bv {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  max-width: 668px;
+  width: 100%;
+  height: 53px;
+  line-height: 42px;
+  text-transform: uppercase;
+  background: url("./../images/trangchinhthuc.png") no-repeat;
+  background-size: cover;
+  margin: 20px 0 28px;
+}
+.GioiThieu_left_arrow__hki_r {
+  margin-top: 10px;
+  margin-right: 9px;
+}
+.GioiThieu_right_arrow__bUMW_ {
+  margin-top: 10px;
+  margin-left: 9px;
+}
+.GioiThieu_gioithieu__WEGvs {
+  max-width: 1200px;
+  width: 100%;
+  height: auto;
+  background-size: cover;
+  margin-top: 66px;
+}
+.GioiThieu_gioithieu__WEGvs p {
+  color: #080101;
+  text-align: justify;
+  font-family: "Roboto";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 30px;
+  padding-top: 8px;
+}
+.GioiThieu_icon_gioithieu__0EYB4 {
+  position: relative;
+  font-weight: 700;
+  font-size: "Roboto";
+}
+.GioiThieu_icon_gioithieu__0EYB4:before {
+  content: "";
+  background: url("./../images/bg-title.png");
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 71px;
+  height: 50px;
+}
+.GioiThieu_title_gioithieu__Gdrre {
+  display: flex;
+  gap: 26px;
+  align-items: center;
+  color: #006719;
+  font-family: "Roboto";
+  font-size: 34px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: normal;
+  text-transform: uppercase;
+  width: -moz-max-content;
+  width: max-content;
+  border-bottom: 2px solid #006719;
+  line-height: 39px;
+}
+.GioiThieu_icon_gioithieu_img__hFE57 {
+  margin: 5px 15px;
+  padding-top: 5px;
+}
+.GioiThieu_videos_789__Whzo8 {
+  display: flex;
+  justify-content: space-between;
+  background: hsla(0, 0%, 6%, 0.6);
+  border-radius: 0 0 20px 20px;
+}
+.GioiThieu_videos_789bet__807ML {
+  max-width: 617px;
+  width: 100%;
+  height: 348px;
+}
+.GioiThieu_text_videos__tnlRp {
+  width: 568px;
+  height: 351px;
+  padding: 0 15px 10px;
+}
+.GioiThieu_text_videos__tnlRp p {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 30px;
+  text-align: justify;
+  color: #fff;
+}
+.GioiThieu_muctieu_antoan__c_mVt {
+  display: flex;
+  justify-content: space-between;
+  gap: 34px;
+  margin-top: 25px;
+}
+.GioiThieu_muctieu__LQJFQ {
+  margin-right: 17px;
+}
+.GioiThieu_antoan_baomat__o_fgu,
+.GioiThieu_muctieu__LQJFQ {
+  width: 583px;
+  background: hsla(0, 0%, 6%, 0.6);
+  border-radius: 0 0 20px 20px;
+}
+.GioiThieu_antoan_baomat__o_fgu {
+  margin-left: 17px;
+}
+.GioiThieu_title_muctieu__uiaJ0 {
+  background: linear-gradient(180deg, #f9a631, #ff5f0c);
+  width: 583px;
+  height: 61px;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 32px;
+  line-height: 38px;
+  text-transform: uppercase;
+  color: #fff;
+  padding: 3px 19px;
+  margin-bottom: 12px;
+  background: url("./../images//MucTieu.png") no-repeat;
+  background-size: cover;
+}
+.GioiThieu_text_muctieu__RYM2a {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 30px;
+  text-align: justify;
+  color: #fff;
+  padding: 0 10px 15px;
+}
+.GioiThieu_antoan__eeBbi {
+  max-width: 583px;
+  width: 100%;
+  height: 61px;
+  text-transform: uppercase;
+  color: #fff;
+  margin-bottom: 12px;
+  background: url("./../images/Title-MucTieu.png") no-repeat;
+  background-size: cover;
+}
+.GioiThieu_text_antoan__KX_NB {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 30px;
+  text-align: justify;
+  color: #fff;
+  padding: 0 10px 15px;
+}
+@media screen and (max-width: 1200px) {
+  .GioiThieu_title_gioithieu__Gdrre {
+    font-size: 20px;
+  }
+  .GioiThieu_icon_gioithieu__0EYB4:before {
+    width: 70px;
+    height: 37px;
+  }
+  .GioiThieu_gioithieu__WEGvs p {
+    font-size: 16px;
+    line-height: 20px;
+  }
+  .GioiThieu_gioithieu__WEGvs {
+    margin-top: 30px;
+  }
+  .GioiThieu_icon_gioithieu_img__hFE57 {
+    margin: 3px 15px;
+    padding-top: 0;
+    width: 25px;
+    height: 29px;
+  }
+}
