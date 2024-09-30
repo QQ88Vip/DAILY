@@ -102,7 +102,7 @@ function updateTime() {
   );
 
   const year = currentTimeGMT8.getUTCFullYear();
-  const month = padZero(currentTimeGMT8.getUTCMonth() + 1); // Tháng trong JavaScript bắt đầu từ 0
+  const month = padZero(currentTimeGMT8.getUTCMonth() + 1);
   const date = padZero(currentTimeGMT8.getUTCDate());
   const hours = padZero(currentTimeGMT8.getUTCHours());
   const minutes = padZero(currentTimeGMT8.getUTCMinutes());
