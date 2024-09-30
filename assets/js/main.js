@@ -95,14 +95,18 @@ function padZero(num) {
 }
 
 function updateTime() {
-  const currentTime = new Date();
+  const currentTimeUTC = new Date();
 
-  const year = currentTime.getFullYear();
-  const month = padZero(currentTime.getMonth() + 1);
-  const date = padZero(currentTime.getDate());
-  const hours = padZero(currentTime.getHours());
-  const minutes = padZero(currentTime.getMinutes());
-  const seconds = padZero(currentTime.getSeconds());
+  const currentTimeGMT8 = new Date(
+    currentTimeUTC.getTime() + 8 * 60 * 60 * 1000
+  );
+
+  const year = currentTimeGMT8.getUTCFullYear();
+  const month = padZero(currentTimeGMT8.getUTCMonth() + 1); // Tháng trong JavaScript bắt đầu từ 0
+  const date = padZero(currentTimeGMT8.getUTCDate());
+  const hours = padZero(currentTimeGMT8.getUTCHours());
+  const minutes = padZero(currentTimeGMT8.getUTCMinutes());
+  const seconds = padZero(currentTimeGMT8.getUTCSeconds());
 
   $("#timeSpan").text(
     `${year}/${month}/${date} ${hours}:${minutes}:${seconds} ( GMT +8 )`
