@@ -21,6 +21,17 @@
         <link rel="stylesheet" href="./assets/css/m_footer.css" as="style">
 
     <script src="./assets/js/jquery.min.js"></script>
+    <script>
+        function redirectMobileHandler() {
+            const width = Math.max(document.clientWidth || 0, window.innerWidth || 0);
+            if (width > 767) {
+                window.location.href = './index.html'
+            }
+        }
+
+        window.onload = redirectMobileHandler();
+        window.onresize = () => redirectMobileHandler();
+    </script>
 </head>
 
 <body cz-shortcut-listen="true">
@@ -119,7 +130,7 @@
                                 </div>
                             </span>
                         </div>
-                        <div class="ant-collapse-content" style="">
+                        <div class="ant-collapse-content">
                             <div class="ant-collapse-content-box">
                                 <p class="text_fm" style="margin-top: 20px;">
                                     <span class="leading-[20x] text-[19px] pt-[5px] pb-[10px] font-[Roboto]"
@@ -163,7 +174,7 @@
                                 </div>
                             </span>
                         </div>
-                        <div class="ant-collapse-content" style="">
+                        <div class="ant-collapse-content">
                             <div class="ant-collapse-content-box">
                                 <p class="text_fm" style="margin-top: 20px;"><span
                                         class="leading-[20x] text-[19px] pt-[5px] pb-[10px]"
@@ -210,7 +221,7 @@
                                 </div>
                             </span>
                         </div>
-                        <div class="ant-collapse-content" style="">
+                        <div class="ant-collapse-content">
                             <div class="ant-collapse-content-box">
                                 <p class="text_fm" style="margin-top: 20px;"><span
                                         class="leading-[20x] text-[19px] pt-[5px] pb-[10px]"
@@ -579,7 +590,7 @@
                                 <p
                                     class="text-[34.141px] uppercase mb-[6px] text-center text-[#292929] font-[700] text-center pt-[4px] w-9/12 flex flex-col">
                                     điện thoại</p>
-                                <a href="tel:+84898701682" target="_blank">
+                                <a href="tel:+84796777788" target="_blank">
                                     <button
                                         class="btn-box-link btn h-[43px] text-[24px] bg-gradient-to-t from-[#FCFCFC] to-[#E3E3E3] rounded-[40px] mb-[6px] text-[#292929] font-[700]   pl-[20px]">
                                         <div class="btn-icon">
@@ -655,13 +666,13 @@
                                 Theo Dõi Chúng Tôi
                             </h3>
                             <div class="sns-list">
-                                <a href="#" target="_blank">
+                                <a href="https://www.facebook.com/QQ88.win" target="_blank">
                                     <img src="./assets/footer_images/sns-fb.png" alt="Facebook" loading="lazy"/>
                                 </a>
                                 <a href="#" target="_blank">
                                     <img src="./assets/footer_images/sns-yt.png" alt="Youtube" loading="lazy"/>
                                 </a>
-                                <a href="#" target="_blank">
+                                <a href="https://t.me/QQ88giaitritructuyenso1" target="_blank">
                                     <img src="./assets/footer_images/sns-tg.png" alt="Telegram" loading="lazy"/>
                                 </a>
                             </div>
