@@ -2,6 +2,33 @@ footer {
   background: url(../footer_images/footer-bg.png);
 }
 
+.d-pc {
+  display: block;
+}
+
+.d-mobile {
+  display: none;
+}
+
+
+
+@media screen and (max-width: 992px) {
+ 
+  .footer-endorse-item img {
+    height: 180px !important;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .d-pc {
+    display: none;
+  }
+
+  .d-mobile {
+    display: block;
+  }
+}
+
 .footer-main {
   padding-top: 30px;
   padding-bottom: 15px;
@@ -11,16 +38,18 @@ footer {
   margin: auto;
   position: relative;
   max-width: 1200px;
-  width: 100%;
+  width: 95%;
 }
 
 .footer-intro-endorse {
-  align-items: flex-start;
   cursor: pointer;
   display: flex;
-  gap: 92px;
+  gap: 5px;
   justify-content: space-between;
   margin-bottom: 27px;
+  align-items: flex-start;
+  align-content: flex-start;
+  flex-direction: column;
 }
 
 .footer-intro-endorse > * {
@@ -28,6 +57,7 @@ footer {
 }
 
 .footer-endorse {
+  width: 100%;
   align-items: center;
   display: flex;
   flex-wrap: wrap;
@@ -37,10 +67,14 @@ footer {
 
 .footer-endorse-head {
   color: #006719;
-  font-size: 26px;
+  font-size: 18px;
   font-weight: 700;
   text-transform: capitalize;
   width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 10px;
 }
 
 .footer-endorse-item {
@@ -53,7 +87,7 @@ footer {
 }
 
 .footer-endorse-item img {
-  height: 75px;
+  height: 230px;
 }
 
 .footer-endorse-hr {
@@ -78,18 +112,19 @@ footer {
 
 .footer-logos {
   display: block;
-  height: 44px;
+  height: max-content;
   width: auto;
 }
 
 .footer-icons {
   display: flex;
   justify-content: space-between;
+  gap: 10px;
 }
 
 .icon-item img {
   display: block;
-  height: 42px;
+  height: auto;
   width: auto;
 }
 
@@ -109,7 +144,7 @@ footer {
 
 .footer-linkslist a {
   color: #006719;
-  font-size: 17px;
+  font-size: 13px;
   line-height: 23px;
   text-decoration: none;
 }
