@@ -11453,7 +11453,7 @@ const Km = () => {
       {
         icon: "/assets/register.png",
         title: "BƯỚC 1: ĐĂNG KÝ TÀI KHOẢN",
-        desc: "Click vào mục 'Đăng Ký' và điền chính xác những thông tin bắt buộc. Sau đó bạn cần liên hệ đến Telegram: @DAILYQQ88 để được hỗ trợ hoàn thành thủ tục đăng ký.",
+        desc: "Click vào mục 'Đăng Ký' và điền chính xác những thông tin bắt buộc. Sau đó bạn cần liên hệ đến Telegram: @QQ88DAILY để được hỗ trợ hoàn thành thủ tục đăng ký.",
       },
       {
         icon: "/assets/contact.png",
