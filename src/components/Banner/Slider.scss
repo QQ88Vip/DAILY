@@ -1,0 +1,83 @@
+/* Slider.scss */
+.slider {
+position: relative;
+width: 100vw;
+height: auto;
+overflow: hidden;
+
+
+.slider-track {
+display: flex;
+transition: transform 0.7s ease-in-out;
+}
+
+
+.slide {
+flex-shrink: 0;
+width: 100%;
+
+
+img {
+// width: 100%;
+width: 100vw;
+height: auto;
+display: block;
+}
+}
+
+
+.arrow {
+position: absolute;
+top: 50%;
+transform: translateY(-50%);
+background: rgba(0, 0, 0, 0.4);
+color: #fff;
+border: none;
+border-radius: 50%;
+padding: 8px 12px;
+cursor: pointer;
+font-size: 24px;
+transition: 0.2s;
+
+
+&:hover {
+background: rgba(0, 0, 0, 0.6);
+}
+
+
+&.left {
+left: 16px;
+}
+
+
+&.right {
+right: 16px;
+}
+}
+
+
+.dots {
+position: absolute;
+left: 50%;
+bottom: 16px;
+transform: translateX(-50%);
+display: flex;
+gap: 8px;
+
+
+.dot {
+width: 12px;
+height: 12px;
+border-radius: 50%;
+background: rgba(255, 255, 255, 0.5);
+border: none;
+cursor: pointer;
+transition: 0.3s;
+
+
+&.active {
+background: #fff;
+}
+}
+}
+}

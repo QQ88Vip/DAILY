@@ -1,0 +1,64 @@
+.rootBenefit {
+  margin-top: 32px;
+}
+
+.containerBenefit {
+    background-color: #fff;
+    border: 1px solid #0a662f;
+    border-radius: 8px;
+    padding: 20px 24px;
+    margin-top: 16px;
+    // width: 100%;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.05);
+  }
+  
+  .title {
+    // text-align: center;
+    color: #0a662f;
+    font-weight: 700;
+    font-size: 24px;
+    margin-bottom: 8px;
+  }
+
+  .divider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 12px;
+  }
+  
+  
+  .content {
+    font-size: 18px;
+    font-family: 'Roboto', 'Noto Sans', sans-serif;
+    line-height: 1.5;
+    color: #000;
+    display: flex;
+    flex-direction: column;
+    text-align: justify;
+  
+    strong {
+      font-weight: bold;
+    }
+  }
+  
+  .unit {
+    margin-top: 16px;
+  }
+
+  @media (max-width: 768px) {
+    .containerBenefit {
+      padding: 12px 16px;
+    }
+
+    .title {
+      font-size: 20px;
+    }
+
+    .content {
+      font-size: 16px;
+      font-family: 'Roboto', 'Noto Sans', sans-serif;
+    }
+
+  }
+  

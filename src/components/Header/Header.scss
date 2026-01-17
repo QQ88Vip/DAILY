@@ -1,0 +1,169 @@
+.header-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 32px;
+}
+
+.header-menu {
+  display: none;
+}
+
+.header-logo {
+  font-size: 2rem;
+  font-weight: 900;
+  color: #FED304;
+  letter-spacing: 2px;
+}
+
+.header-logo-mobile {
+  display: none;
+}
+
+.header-actions {
+  display: flex;
+  gap: 16px;
+}
+
+.header-actions-link {
+  display: flex;
+  margin: 0 16px;
+  gap: 32px;
+}
+
+.header-actions-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+  color: #ffc600;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.header-actions-item img {
+  width: 32px;
+}
+
+.btn {
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 1rem;
+  padding: 8px 32px;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+  transition: box-shadow 0.2s, background 0.2s;
+}
+
+.btn.login {
+  background: #FFFCDF;
+  color: #006719;
+  box-shadow: 0 4px 4px 0 rgba(0,0,0,0.15);
+  border: 1.5px solid #F8E64F;
+}
+
+.btn.register {
+  background: linear-gradient(90deg, #F8E64F 0%, #CFEA29 100%);
+  color: #006719;
+  border: none;
+  box-shadow: 0 4px 4px 0 rgba(0,0,0,0.15);
+}
+
+.btn:hover {
+  filter: brightness(0.95);
+}
+
+@media (max-width: 900px) {
+  .header-container {
+    padding: 0 16px;
+    height: 100px;
+  }
+  .header-logo {
+    font-size: 1.3rem;
+    font-weight: 900;
+    color: #FED304;
+    letter-spacing: 2px;
+  }
+
+  .header-logo img {
+    height: 50px;
+  }
+  .header-actions-link {
+    display: flex;
+    margin: 0 8px;
+    gap: 8px;
+  }
+  
+  .header-actions-item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 4px;
+    color: #ffc600;
+    font-size: 18px;
+    font-weight: 500;
+  }
+  .header-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+  .btn {
+    padding: 6px 16px;
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .header-container {
+    padding: 0 8px;
+    height: 68px;
+    justify-content: flex-start;
+    gap: 16px;
+  }
+  .header-menu {
+    display: block;
+    width: 32px;
+    height: 32px;
+  }
+  .header-logo {
+    // font-size: 1.1rem;
+    display: none !important;
+  }
+
+  .header-actions {
+    display: none !important;
+  }
+  .header-actions-link {
+    display: none !important;
+  }
+  .header-logo-mobile {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-right: 8px;
+    width: 100%;
+    gap: 8px;
+  }
+
+  .separator {
+    width: 2px;
+    height: 26px;
+    background: #FED304;
+  }
+  .header-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+  .btn {
+    padding: 4px 10px;
+    font-size: 0.85rem;
+    border-radius: 14px;
+  }
+} 
