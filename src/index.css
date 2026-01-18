@@ -1,4 +1,5 @@
 /* Reset lại style global để không ảnh hưởng đến layout custom */
+@import "tailwindcss";
 :root {
   font-family: 'Roboto', sans-serif;
   line-height: 1.5;

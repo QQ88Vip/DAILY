@@ -1,321 +1,399 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Footer.scss";
 
 const Footer: React.FC = () => {
+  const [isExpanded, setIsExpanded] = useState(false);
+  const [imageStates, setImageStates] = useState({
+    xemthem: true,
+    morong: false,
+  });
+
+  const handleToggleExpand = () => {
+    setIsExpanded(!isExpanded);
+  };
+
+  const handleImageClick = () => {
+    setImageStates(prev => ({
+      xemthem: !prev.xemthem,
+      morong: !prev.morong,
+    }));
+  };
+
   return (
     <div>
-      <div className="footer-pc">
+      <div className="footer-pc hidden md:block">
         <div className="footer-main">
-          <div className="main-wrap">
-            <div className="footer-intro-endorse">
+          <div className="main-wrap pl-0 md:pl-5 flex-nowrap">
+            <div className="footer-intro-endorse -mx-0 md:-mx-2">
               <div className="footer-endorse">
-                <div className="footer-endorse-head">
-                  <div className="footer-endorse-head-left">đối tác chính thức</div>
-                  <div className="footer-endorse-head-right">đại sứ thương hiệu</div>
-                </div>
-                <section className="ambassador-strip">
-                  <div className="ambassador-card">
-                    <img
-                      className="ambassador-photo"
-                      src="/assets/footer_images/player_suarez.png"
-                      alt="Luis Suarez"
-                    />
-                    <div className="logo-bar">
-                      <img src="/assets/footer_images/suarez_sign.png" alt="Suarez Icon" />
-                      <span className="divider"></span>
-                      <img src="/assets/footer_images/logo-okvip.png" alt="OKVIP" />
+                <section className="ambassador-strip flex-col !justify-between md:flex-row !gap-0  items-stretch flex-nowrap ">
+                  <div className="w-auto max-w-[240px] lg:max-w-[35%]  flex items-start">
+                    {!isExpanded && (
+                      <img
+                        className=" w-auto h-auto object-contain"
+                        src="/assets/footer_images/qqxemthem.png"
+                        alt="Ghi Chú"
+                        onClick={handleToggleExpand}
+                        
+                      />
+                    )}
+                    {isExpanded && (
+                      <img
+                        className="w-full h-full object-contain"
+                        src="/assets/footer_images/qqmorong1.png"
+                        alt="Ghi Chú"
+                      />
+                    )}
+                  </div>
+                  <div className="w-auto lg:max-w-[20%]">
+                    <div className="text-md lg:text-xl 2xl:text-2xl font-bold  text-[#006719] uppercase text-left">liên kết nhanh</div>
+                    <div className="border-b border-[#006719] lg:py-2">
+                      <a href="" className="flex items-center 2xlgap-2 ">
+                        <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5 md:w-6 md:h-6" viewBox="0 0 24 24" fill="none">
+                          <path d="M8.5002 8.3C8.1002 7.9 7.5002 7.9 7.1002 8.3C6.7002 8.7 6.7002 9.3 7.1002 9.7L9.3002 12L7.0002 14.3C6.8002 14.5 6.7002 14.7 6.7002 15C6.7002 15.6 7.1002 16 7.7002 16C8.0002 16 8.2002 15.9 8.4002 15.7L11.4002 12.7C11.8002 12.3 11.8002 11.7 11.4002 11.3L8.5002 8.3ZM17.0002 11.3L14.0002 8.3C13.6002 7.9 13.0002 7.9 12.6002 8.3C12.2002 8.7 12.2002 9.3 12.6002 9.7L14.9002 12L12.6002 14.3C12.4002 14.5 12.3002 14.7 12.3002 15C12.3002 15.6 12.7002 16 13.3002 16C13.6002 16 13.8002 15.9 14.0002 15.7L17.0002 12.7C17.3002 12.3 17.3002 11.7 17.0002 11.3Z" fill="#006719" />
+                        </svg>
+                        <p
+                          className="text-[#006719] text-sm 2xl:text-[18px] lg:text-md  leading-[150%] "
+                        >
+                          Điều khoản và Điều Kiện
+                        </p>
+                      </a>
                     </div>
-                    <p className="caption">Luis Suarez 2025 ‑ 2026</p>
+                    <div className="border-b border-[#006719] lg:py-2">
+                      <a href="" className="flex items-center 2xlgap-2 ">
+                        <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5 md:w-6 md:h-6" viewBox="0 0 24 24" fill="none">
+                          <path d="M8.5002 8.3C8.1002 7.9 7.5002 7.9 7.1002 8.3C6.7002 8.7 6.7002 9.3 7.1002 9.7L9.3002 12L7.0002 14.3C6.8002 14.5 6.7002 14.7 6.7002 15C6.7002 15.6 7.1002 16 7.7002 16C8.0002 16 8.2002 15.9 8.4002 15.7L11.4002 12.7C11.8002 12.3 11.8002 11.7 11.4002 11.3L8.5002 8.3ZM17.0002 11.3L14.0002 8.3C13.6002 7.9 13.0002 7.9 12.6002 8.3C12.2002 8.7 12.2002 9.3 12.6002 9.7L14.9002 12L12.6002 14.3C12.4002 14.5 12.3002 14.7 12.3002 15C12.3002 15.6 12.7002 16 13.3002 16C13.6002 16 13.8002 15.9 14.0002 15.7L17.0002 12.7C17.3002 12.3 17.3002 11.7 17.0002 11.3Z" fill="#006719" />
+                        </svg>
+                        <p
+                          className="text-[#006719] text-sm 2xl:text-[18px] lg:text-md  leading-[150%] "
+                        >
+                          Giới thiệu Về Q888
+                        </p>
+                      </a>
+                    </div>
+                    <div className="border-b border-[#006719] lg:py-2">
+                      <a href="" className="flex items-center 2xlgap-2 ">
+                        <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5 md:w-6 md:h-6" viewBox="0 0 24 24" fill="none">
+                          <path d="M8.5002 8.3C8.1002 7.9 7.5002 7.9 7.1002 8.3C6.7002 8.7 6.7002 9.3 7.1002 9.7L9.3002 12L7.0002 14.3C6.8002 14.5 6.7002 14.7 6.7002 15C6.7002 15.6 7.1002 16 7.7002 16C8.0002 16 8.2002 15.9 8.4002 15.7L11.4002 12.7C11.8002 12.3 11.8002 11.7 11.4002 11.3L8.5002 8.3ZM17.0002 11.3L14.0002 8.3C13.6002 7.9 13.0002 7.9 12.6002 8.3C12.2002 8.7 12.2002 9.3 12.6002 9.7L14.9002 12L12.6002 14.3C12.4002 14.5 12.3002 14.7 12.3002 15C12.3002 15.6 12.7002 16 13.3002 16C13.6002 16 13.8002 15.9 14.0002 15.7L17.0002 12.7C17.3002 12.3 17.3002 11.7 17.0002 11.3Z" fill="#006719" />
+                        </svg>
+                        <p
+                          className="text-[#006719] text-sm lg:text-md  leading-[150%] "
+                        >
+                          Chơi Có Trách Nhiệm
+                        </p>
+                      </a>
+                    </div>
+                    <div className="border-b border-[#006719] lg:py-2">
+                      <a href="" className="flex items-center 2xlgap-2 ">
+                        <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5 md:w-6 md:h-6" viewBox="0 0 24 24" fill="none">
+                          <path d="M8.5002 8.3C8.1002 7.9 7.5002 7.9 7.1002 8.3C6.7002 8.7 6.7002 9.3 7.1002 9.7L9.3002 12L7.0002 14.3C6.8002 14.5 6.7002 14.7 6.7002 15C6.7002 15.6 7.1002 16 7.7002 16C8.0002 16 8.2002 15.9 8.4002 15.7L11.4002 12.7C11.8002 12.3 11.8002 11.7 11.4002 11.3L8.5002 8.3ZM17.0002 11.3L14.0002 8.3C13.6002 7.9 13.0002 7.9 12.6002 8.3C12.2002 8.7 12.2002 9.3 12.6002 9.7L14.9002 12L12.6002 14.3C12.4002 14.5 12.3002 14.7 12.3002 15C12.3002 15.6 12.7002 16 13.3002 16C13.6002 16 13.8002 15.9 14.0002 15.7L17.0002 12.7C17.3002 12.3 17.3002 11.7 17.0002 11.3Z" fill="#006719" />
+                        </svg>
+                        <p
+                          className="text-[#006719] text-sm 2xl:text-[18px] lg:text-md  leading-[150%] "
+                        >
+                          Miễn Trách Nhiệm
+                        </p>
+                      </a>
+                    </div>
+                    <div className="border-b border-[#006719] lg:py-2">
+                      <a href="" className="flex items-center 2xlgap-2 ">
+                        <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5 md:w-6 md:h-6" viewBox="0 0 24 24" fill="none">
+                          <path d="M8.5002 8.3C8.1002 7.9 7.5002 7.9 7.1002 8.3C6.7002 8.7 6.7002 9.3 7.1002 9.7L9.3002 12L7.0002 14.3C6.8002 14.5 6.7002 14.7 6.7002 15C6.7002 15.6 7.1002 16 7.7002 16C8.0002 16 8.2002 15.9 8.4002 15.7L11.4002 12.7C11.8002 12.3 11.8002 11.7 11.4002 11.3L8.5002 8.3ZM17.0002 11.3L14.0002 8.3C13.6002 7.9 13.0002 7.9 12.6002 8.3C12.2002 8.7 12.2002 9.3 12.6002 9.7L14.9002 12L12.6002 14.3C12.4002 14.5 12.3002 14.7 12.3002 15C12.3002 15.6 12.7002 16 13.3002 16C13.6002 16 13.8002 15.9 14.0002 15.7L17.0002 12.7C17.3002 12.3 17.3002 11.7 17.0002 11.3Z" fill="#006719" />
+                        </svg>
+                        <p
+                          className="text-[#006719] text-sm 2xl:text-[18px] lg:text-md  leading-[150%] "
+                        >
+                          Chính Sách Bảo Mật
+                        </p>
+                      </a>
+                    </div>
+                    <div className="border-b border-[#006719] lg:py-2">
+                      <a href="" className="flex items-center 2xlgap-2 ">
+                        <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5 md:w-6 md:h-6" viewBox="0 0 24 24" fill="none">
+                          <path d="M8.5002 8.3C8.1002 7.9 7.5002 7.9 7.1002 8.3C6.7002 8.7 6.7002 9.3 7.1002 9.7L9.3002 12L7.0002 14.3C6.8002 14.5 6.7002 14.7 6.7002 15C6.7002 15.6 7.1002 16 7.7002 16C8.0002 16 8.2002 15.9 8.4002 15.7L11.4002 12.7C11.8002 12.3 11.8002 11.7 11.4002 11.3L8.5002 8.3ZM17.0002 11.3L14.0002 8.3C13.6002 7.9 13.0002 7.9 12.6002 8.3C12.2002 8.7 12.2002 9.3 12.6002 9.7L14.9002 12L12.6002 14.3C12.4002 14.5 12.3002 14.7 12.3002 15C12.3002 15.6 12.7002 16 13.3002 16C13.6002 16 13.8002 15.9 14.0002 15.7L17.0002 12.7C17.3002 12.3 17.3002 11.7 17.0002 11.3Z" fill="#006719" />
+                        </svg>
+                        <p
+                          className="text-[#006719] text-sm 2xl:text-[18px] lg:text-md  leading-[150%] "
+                        >
+                          Câu Hỏi Thường Gặp
+                        </p>
+                      </a>
+                    </div>
+                    <div className=" lg:py-2">
+                      <a href="" className="flex items-center 2xlgap-2 ">
+                        <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5 md:w-6 md:h-6" viewBox="0 0 24 24" fill="none">
+                          <path d="M8.5002 8.3C8.1002 7.9 7.5002 7.9 7.1002 8.3C6.7002 8.7 6.7002 9.3 7.1002 9.7L9.3002 12L7.0002 14.3C6.8002 14.5 6.7002 14.7 6.7002 15C6.7002 15.6 7.1002 16 7.7002 16C8.0002 16 8.2002 15.9 8.4002 15.7L11.4002 12.7C11.8002 12.3 11.8002 11.7 11.4002 11.3L8.5002 8.3ZM17.0002 11.3L14.0002 8.3C13.6002 7.9 13.0002 7.9 12.6002 8.3C12.2002 8.7 12.2002 9.3 12.6002 9.7L14.9002 12L12.6002 14.3C12.4002 14.5 12.3002 14.7 12.3002 15C12.3002 15.6 12.7002 16 13.3002 16C13.6002 16 13.8002 15.9 14.0002 15.7L17.0002 12.7C17.3002 12.3 17.3002 11.7 17.0002 11.3Z" fill="#006719" />
+                        </svg>
+                        <p
+                          className="text-[#006719] text-sm 2xl:text-[18px] lg:text-md leading-[150%] "
+                        >
+                          Hợp Tác Đại Lý
+                        </p>
+                      </a>
+                    </div>
+
+
                   </div>
 
-                  <div className="ambassador-card">
-                    <img
-                      className="ambassador-photo"
-                      src="/assets/footer_images/player_messi.png"
-                      alt="Lionel Messi"
-                    />
-                    <div className="logo-bar">
-                      <img src="/assets/footer_images/logo-afa.png" alt="Argentina AFA" />
-                      <span className="divider"></span>
-                      <img src="/assets/footer_images/logo-okvip.png" alt="OKVIP" />
+                  <div className="w-auto lg:max-w-[20%] ">
+                    <div className="text-md 2xl:text-2xl lg:text-xl font-bold  text-[#006719] uppercase text-left">tổng hợp</div>
+                    <div className="border-b border-[#006719] lg:py-2">
+                      <a href="" className="flex items-center 2xl:gap-2 ">
+                        <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5 md:w-6 md:h-6" viewBox="0 0 24 24" fill="none">
+                          <path d="M8.5002 8.3C8.1002 7.9 7.5002 7.9 7.1002 8.3C6.7002 8.7 6.7002 9.3 7.1002 9.7L9.3002 12L7.0002 14.3C6.8002 14.5 6.7002 14.7 6.7002 15C6.7002 15.6 7.1002 16 7.7002 16C8.0002 16 8.2002 15.9 8.4002 15.7L11.4002 12.7C11.8002 12.3 11.8002 11.7 11.4002 11.3L8.5002 8.3ZM17.0002 11.3L14.0002 8.3C13.6002 7.9 13.0002 7.9 12.6002 8.3C12.2002 8.7 12.2002 9.3 12.6002 9.7L14.9002 12L12.6002 14.3C12.4002 14.5 12.3002 14.7 12.3002 15C12.3002 15.6 12.7002 16 13.3002 16C13.6002 16 13.8002 15.9 14.0002 15.7L17.0002 12.7C17.3002 12.3 17.3002 11.7 17.0002 11.3Z" fill="#006719" />
+                        </svg>
+                        <p
+                          className="text-[#006719] text-sm 2xl:text-[18px] lg:text-sm  leading-[150%] "
+                        >
+                          THỂ THAO
+                        </p>
+                      </a>
                     </div>
-                    <p className="caption">Argentina AFA 2023 ‑ 2026</p>
+                    <div className="border-b border-[#006719] lg:py-2">
+                      <a href="" className="flex items-center 2xlgap-2 ">
+                        <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5 md:w-6 md:h-6" viewBox="0 0 24 24" fill="none">
+                          <path d="M8.5002 8.3C8.1002 7.9 7.5002 7.9 7.1002 8.3C6.7002 8.7 6.7002 9.3 7.1002 9.7L9.3002 12L7.0002 14.3C6.8002 14.5 6.7002 14.7 6.7002 15C6.7002 15.6 7.1002 16 7.7002 16C8.0002 16 8.2002 15.9 8.4002 15.7L11.4002 12.7C11.8002 12.3 11.8002 11.7 11.4002 11.3L8.5002 8.3ZM17.0002 11.3L14.0002 8.3C13.6002 7.9 13.0002 7.9 12.6002 8.3C12.2002 8.7 12.2002 9.3 12.6002 9.7L14.9002 12L12.6002 14.3C12.4002 14.5 12.3002 14.7 12.3002 15C12.3002 15.6 12.7002 16 13.3002 16C13.6002 16 13.8002 15.9 14.0002 15.7L17.0002 12.7C17.3002 12.3 17.3002 11.7 17.0002 11.3Z" fill="#006719" />
+                        </svg>
+                        <p
+                          className="text-[#006719] text-sm 2xl:text-[18px] lg:text-sm leading-[150%] "
+                        >
+                          CASINO
+                        </p>
+                      </a>
+                    </div>
+                    <div className="border-b border-[#006719] lg:py-2">
+                      <a href="" className="flex items-center 2xlgap-2 ">
+                        <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5 md:w-6 md:h-6" viewBox="0 0 24 24" fill="none">
+                          <path d="M8.5002 8.3C8.1002 7.9 7.5002 7.9 7.1002 8.3C6.7002 8.7 6.7002 9.3 7.1002 9.7L9.3002 12L7.0002 14.3C6.8002 14.5 6.7002 14.7 6.7002 15C6.7002 15.6 7.1002 16 7.7002 16C8.0002 16 8.2002 15.9 8.4002 15.7L11.4002 12.7C11.8002 12.3 11.8002 11.7 11.4002 11.3L8.5002 8.3ZM17.0002 11.3L14.0002 8.3C13.6002 7.9 13.0002 7.9 12.6002 8.3C12.2002 8.7 12.2002 9.3 12.6002 9.7L14.9002 12L12.6002 14.3C12.4002 14.5 12.3002 14.7 12.3002 15C12.3002 15.6 12.7002 16 13.3002 16C13.6002 16 13.8002 15.9 14.0002 15.7L17.0002 12.7C17.3002 12.3 17.3002 11.7 17.0002 11.3Z" fill="#006719" />
+                        </svg>
+                        <p
+                          className="text-[#006719] text-sm 2xl:text-[18px] lg:text-sm  leading-[150%] "
+                        >
+                          NỔ HŨ
+                        </p>
+                      </a>
+                    </div>
+                    <div className="border-b border-[#006719] lg:py-2">
+                      <a href="" className="flex items-center 2xlgap-2 ">
+                        <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5 md:w-6 md:h-6" viewBox="0 0 24 24" fill="none">
+                          <path d="M8.5002 8.3C8.1002 7.9 7.5002 7.9 7.1002 8.3C6.7002 8.7 6.7002 9.3 7.1002 9.7L9.3002 12L7.0002 14.3C6.8002 14.5 6.7002 14.7 6.7002 15C6.7002 15.6 7.1002 16 7.7002 16C8.0002 16 8.2002 15.9 8.4002 15.7L11.4002 12.7C11.8002 12.3 11.8002 11.7 11.4002 11.3L8.5002 8.3ZM17.0002 11.3L14.0002 8.3C13.6002 7.9 13.0002 7.9 12.6002 8.3C12.2002 8.7 12.2002 9.3 12.6002 9.7L14.9002 12L12.6002 14.3C12.4002 14.5 12.3002 14.7 12.3002 15C12.3002 15.6 12.7002 16 13.3002 16C13.6002 16 13.8002 15.9 14.0002 15.7L17.0002 12.7C17.3002 12.3 17.3002 11.7 17.0002 11.3Z" fill="#006719" />
+                        </svg>
+                        <p
+                          className="text-[#006719] text-sm 2xl:text-[18px] lg:text-sm  leading-[150%] "
+                        >
+                          GAME BÀI
+                        </p>
+                      </a>
+                    </div>
+                    <div className="border-b border-[#006719] lg:py-2">
+                      <a href="" className="flex items-center 2xlgap-2 ">
+                        <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5 md:w-6 md:h-6" viewBox="0 0 24 24" fill="none">
+                          <path d="M8.5002 8.3C8.1002 7.9 7.5002 7.9 7.1002 8.3C6.7002 8.7 6.7002 9.3 7.1002 9.7L9.3002 12L7.0002 14.3C6.8002 14.5 6.7002 14.7 6.7002 15C6.7002 15.6 7.1002 16 7.7002 16C8.0002 16 8.2002 15.9 8.4002 15.7L11.4002 12.7C11.8002 12.3 11.8002 11.7 11.4002 11.3L8.5002 8.3ZM17.0002 11.3L14.0002 8.3C13.6002 7.9 13.0002 7.9 12.6002 8.3C12.2002 8.7 12.2002 9.3 12.6002 9.7L14.9002 12L12.6002 14.3C12.4002 14.5 12.3002 14.7 12.3002 15C12.3002 15.6 12.7002 16 13.3002 16C13.6002 16 13.8002 15.9 14.0002 15.7L17.0002 12.7C17.3002 12.3 17.3002 11.7 17.0002 11.3Z" fill="#006719" />
+                        </svg>
+                        <p
+                          className="text-[#006719] text-sm 2xl:text-[18px] lg:text-sm leading-[150%] "
+                        >
+                          BẮN CÁ
+                        </p>
+                      </a>
+                    </div>
+                    <div className="border-b border-[#006719] lg:py-2">
+                      <a href="" className="flex items-center 2xlgap-2 ">
+                        <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5 md:w-6 md:h-6" viewBox="0 0 24 24" fill="none">
+                          <path d="M8.5002 8.3C8.1002 7.9 7.5002 7.9 7.1002 8.3C6.7002 8.7 6.7002 9.3 7.1002 9.7L9.3002 12L7.0002 14.3C6.8002 14.5 6.7002 14.7 6.7002 15C6.7002 15.6 7.1002 16 7.7002 16C8.0002 16 8.2002 15.9 8.4002 15.7L11.4002 12.7C11.8002 12.3 11.8002 11.7 11.4002 11.3L8.5002 8.3ZM17.0002 11.3L14.0002 8.3C13.6002 7.9 13.0002 7.9 12.6002 8.3C12.2002 8.7 12.2002 9.3 12.6002 9.7L14.9002 12L12.6002 14.3C12.4002 14.5 12.3002 14.7 12.3002 15C12.3002 15.6 12.7002 16 13.3002 16C13.6002 16 13.8002 15.9 14.0002 15.7L17.0002 12.7C17.3002 12.3 17.3002 11.7 17.0002 11.3Z" fill="#006719" />
+                        </svg>
+                        <p
+                          className="text-[#006719] text-sm 2xl:text-[18px] lg:text-sm leading-[150%] "
+                        >
+                          ĐÁ GÀ
+                        </p>
+                      </a>
+                    </div>
+                    <div className="lg:py-2">
+                      <a href="" className="flex items-center 2xl:gap-2 ">
+                        <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5 md:w-6 md:h-6" viewBox="0 0 24 24" fill="none">
+                          <path d="M8.5002 8.3C8.1002 7.9 7.5002 7.9 7.1002 8.3C6.7002 8.7 6.7002 9.3 7.1002 9.7L9.3002 12L7.0002 14.3C6.8002 14.5 6.7002 14.7 6.7002 15C6.7002 15.6 7.1002 16 7.7002 16C8.0002 16 8.2002 15.9 8.4002 15.7L11.4002 12.7C11.8002 12.3 11.8002 11.7 11.4002 11.3L8.5002 8.3ZM17.0002 11.3L14.0002 8.3C13.6002 7.9 13.0002 7.9 12.6002 8.3C12.2002 8.7 12.2002 9.3 12.6002 9.7L14.9002 12L12.6002 14.3C12.4002 14.5 12.3002 14.7 12.3002 15C12.3002 15.6 12.7002 16 13.3002 16C13.6002 16 13.8002 15.9 14.0002 15.7L17.0002 12.7C17.3002 12.3 17.3002 11.7 17.0002 11.3Z" fill="#006719" />
+                        </svg>
+                        <p
+                          className="text-[#006719] text-sm 2xl:text-[18px] lg:text-sm leading-[150%] "
+                        >
+                          XỔ SỐ
+                        </p>
+                      </a>
+                    </div>
+
+
                   </div>
 
-                  <div className="ambassador-card">
-                    <img
-                      className="ambassador-photo"
-                      src="/assets/footer_images/player_femenia.png"
-                      alt="Villarreal Player"
-                    />
-                    <div className="logo-bar">
-                      <img src="/assets/footer_images/logo-cvf.png" alt="Villarreal CF" />
-                      <span className="divider"></span>
-                      <img src="/assets/footer_images/logo-okvip.png" alt="OKVIP" />
-                    </div>
-                    <p className="caption">Villarreal CF 2023 ‑ 2026</p>
-                  </div>
-
-                  <div className="ambassador-card">
-                    <img
-                      className="ambassador-photo"
-                      src="/assets/footer_images/player_terry.png"
-                      alt="John Terry"
-                    />
-                    <div className="logo-bar">
-                      <img src="/assets/footer_images/johnterry_sign.png" alt="Signature" />
-                    </div>
-                    <p className="caption">John Terry 2025 ‑ 2026</p>
+                  <div className="w-auto md:max-w-[150px] lg:max-w-[24%] ">
+                    <div className="text-sm 2xl:text-2xl lg:text-xl font-bold  text-[#006719] uppercase text-left">ĐẠI Sứ Thương Hiệu</div>
+                    <img src="/assets/footer_images/johnTerry-new.png" alt="John Terry" className="w-full lg:w-auto" />
                   </div>
                 </section>
               </div>
             </div>
+            {isExpanded && (
+              <div className=" xl:-mt-4 xl:mb-5 lg:-mt-5 lg:mb-5 lg:ml-0 -mt-6 mb-4 -ml-0.5">
+                <img
+                  src="/assets/footer_images/qqmorong.png"
+                  alt="Ghi Chú"
+                  className="cursor-pointer w-full "
+                  onClick={handleToggleExpand}
+                />
+              </div>
+            )}
             <div className="footer-logos-icons">
-              <div className="footer-logos">
-                <img src="/assets/footer_images/footer-logos.png" alt="logos" />
-              </div>
-              <div className="footer-icons">
-                <div className="icon-item">
-                  <img src="/assets/footer_images/footer-icon1.png" alt="icon1" />
+              <div className="footer-icons flex flex-nowrap">
+                <div className="max-w-[40px] w-auto my-auto">
+                  <a href="">
+                    <img src="/assets/footer_images/1.png" alt="icon1" />
+                  </a>
                 </div>
-                <div className="icon-item">
-                  <img src="/assets/footer_images/footer-icon2.png" alt="icon2" />
+                <div className="max-w-[40px] w-auto my-auto">
+                  <a href="">
+                    <img src="/assets/footer_images/2.png" alt="icon1" />
+                  </a>
                 </div>
-                <div className="icon-item">
-                  <img src="/assets/footer_images/footer-icon3.png" alt="icon3" />
+                <div className="max-w-[40px] w-auto my-auto">
+                  <a href="">
+                    <img src="/assets/footer_images/3.png" alt="icon1" />
+                  </a>
                 </div>
-                <div className="icon-item">
-                  <img src="/assets/footer_images/footer-icon4.png" alt="icon4" />
+                <div className="max-w-[40px] w-auto my-auto">
+                  <a href="">
+                    <img src="/assets/footer_images/4.png" alt="icon1" />
+                  </a>
                 </div>
-                <a
-                  className="icon-item icon-sns"
-                  href="https://qq88.io/footer/tele"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <img src="/assets/footer_images/footer-icon5.png" alt="icon5" />
-                </a>
-                <a
-                  className="icon-item icon-sns"
-                  href="https://qq88.io/footer/fb"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <img src="/assets/footer_images/footer-icon6.png" alt="icon6" />
-                </a>
-                <a
-                  className="icon-item icon-sns"
-                  href="https://qq88.io/footer/yt"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <img src="/assets/footer_images/footer-icon7.png" alt="icon7" />
-                </a>
+                <div className="max-w-[40px] w-auto my-auto">
+                  <a href="">
+                    <img src="/assets/footer_images/5.png" alt="icon1" />
+                  </a>
+                </div>
+                <div className="max-w-[40px] w-auto my-auto">
+                  <a href="">
+                    <img src="/assets/footer_images/6.png" alt="icon1" />
+                  </a>
+                </div>
+                <div className="max-w-[40px] w-auto my-auto">
+                  <a href="">
+                    <img src="/assets/footer_images/7.png" alt="icon1" />
+                  </a>
+                </div>
+                <div className="max-w-[40px] w-auto my-auto">
+                  <a href="">
+                    <img src="/assets/footer_images/8.png" alt="icon1" />
+                  </a>
+                </div>
+                <div className="max-w-[40px] w-auto my-auto">
+                  <a href="">
+                    <img src="/assets/footer_images/9.png" alt="icon1" />
+                  </a>
+                </div>
+                <div className="max-w-[40px] w-auto my-auto">
+                  <a href="">
+                    <img src="/assets/footer_images/10.png" alt="icon1" />
+                  </a>
+                </div>
+                <div className="max-w-[40px] w-auto my-auto">
+                  <a href="/assets/footer_images/tele.png">
+                    <img src="/assets/footer_images/11.png" alt="icon1" />
+                  </a>
+                </div>
+                <div className="max-w-[40px] w-auto my-auto">
+                  <a href="/assets/footer_images/fb.png">
+                    <img src="/assets/footer_images/12.png" alt="icon1" />
+                  </a>
+                </div>
+                <div className="max-w-[40px] w-auto my-auto">
+                  <a href="/assets/footer_images/yt.png">
+                    <img src="/assets/footer_images/13.png" alt="icon1" />
+                  </a>
+                </div>
+
               </div>
             </div>
-            <div className="footer-linkslist">
-              <a href="https://qq88.io/dieukhoanvadieukien">Điều Khoản Và Điều Kiện</a>
-              <div className="hr"></div>
-              <a href="#">Về QQ88</a>
-              <div className="hr"></div>
-              <a href="#">Chơi Có Trách Nhiệm</a>
-              <div className="hr"></div>
-              <a href="#">Miễn Trách Nhiệm</a>
-              <div className="hr"></div>
-              <a href="#">Quyền Riêng Tư</a>
-              <div className="hr"></div>
-              <a href="#">Câu Hỏi Thường Gặp</a>
-            </div>
-            <div className="footer-copy">Copyright © QQ88 Reserved</div>
+            <div className="w-full  px-4 md:px-0 text-center md:justify-start"><span className="text-[#006719] text-sm 2xl:text-lg lg:text-xl font-normal  leading-6 line-clamp-3">QQ88 được sở hữu và vận hành bởi Cyber Labs B.V., một công ty được đăng ký tại Curaçao với số đăng ký 166785 và địa chỉ đăng ký tại:</span></div>
+            <div className="w-full px-4 md:px-0 text-center md:justify-start text-sm 2xl:text-lg text-[#006719] lg:text-xl ">Zuikertuintjeweg Z/N, Curaçao.Cyber Labs B.V. được cấp phép và quản lý bởi Curaçao Gaming Authority (CGA) với số giấy phép: OGL/2024/1696/1055, được cấp vào ngày 13/03/2025. Dịch vụ tin cậy và được đại diện bởi <a href="">https://igagroup.com</a></div>
+            <div className="footer-copy text-sm 2xl:text-base px-4 md:px-0 lg:text-xl ">Copyright © QQ88 Reserved</div>
           </div>
         </div>
       </div>
 
-      <div className="footer-mobile">
-        <div className="mb-wrapper">
-          <h2 className="section-title">Đại sứ thương hiệu</h2>
-
-          <div className="partner-line">
-            <div>
-              <p className="partner-info">John Terry</p>
-              <p className="partner-info">Năm 2025 - 2026</p>
-            </div>
-            <div className="partner-sign">
-              <img src="/assets/footer_images/johnterry_sign.png" alt="John Terry" />
-            </div>
+      <div className="footer-mb w-full block md:hidden flex flex-col justify-center items-start">
+      <img src="/assets/footer_images/amba.png" alt="" className='w-full h-auto object-contain mx-1' />
+      <div className='w-full h-[15px] my-1 mx-1 flex justify-start items-center gap-2'>
+        <img src="/assets/footer_images/title.png" alt="" className='w-fit h-full object-contain' />
+        <span
+          className="text-[#006719] font-['Roboto',sans-serif] text-[16px] font-bold capitalize"
+        >
+          QQ88 Chiến Dịch Thương Hiệu
+        </span>
+      </div>
+      <div
+        id="footer_content"
+        className='w-full h-auto py-1 cursor-pointer relative'
+        onClick={handleImageClick}
+      >
+        <img
+          src="/assets/footer_images/1.png"
+          alt=""
+          className={`w-full h-auto object-contain transition-opacity duration-500 ${imageStates.xemthem ? 'opacity-100' : 'opacity-0 absolute top-0 left-0'
+            }`}
+        />
+        <img
+          src="/assets/footer_images/1f.png"
+          alt=""
+          className={`w-full h-auto object-contain transition-opacity duration-500 ${imageStates.morong ? 'opacity-100' : 'opacity-0 absolute top-0 left-0'
+            }`}
+        />
+      </div>
+      
+      <div className="w-full h-auto py-1 mt-2 mx-1 flex flex-col justify-start items-start gap-4">
+        <div className="w-full h-fit flex justify-between items-center">
+          <div className="w-[55%] h-[85px] flex flex-col items-start gap-2">
+            <p className="text-[#006719] text-[18px] font-normal not-italic leading-normal">Giấy Phép</p>
+            <img src="/assets/footer_images/giayphep.png" alt="" className="w-auto h-full max-h-[50px] object-contain" />
           </div>
-
-          <div className="news-chip">
-            <img src="/assets/footer_images/title_campain.png" alt="Campain" />
+          <div className="w-[45%] h-[85px] flex flex-col items-start gap-2">
+            <p className="text-[#006719] text-[18px] font-normal not-italic leading-normal">Bảo Vệ</p>
+            <img src="/assets/footer_images/baove.png" alt="" className="w-auto h-full max-h-[50px] object-contain" />
           </div>
-
-          <article className="news-card">
-            <div className="news-content">
-              <img src="/assets/footer_images/terry_qq88.png" alt="John Terry" />
-              <p className="news-desc">
-                QQ88 chính thức hợp tác cùng huyền thoại bóng đá John Terry trong vai trò Đại Sứ
-                Thương Hiệu Toàn Cầu giai đoạn 2025 - 2026.
-                <a href="#" className="news-more">
-                  Xem thêm
-                </a>
-              </p>
-            </div>
-            <div className="news-thumb">
-              <img src="/assets/footer_images/terry_sign.png" alt="John Terry" />
-            </div>
-          </article>
-
-          <h2 className="section-title">Đối Tác Chính Thức</h2>
-
-          <img className="ba-ong" src="/assets/footer_images/3ong.png" alt="Doi tac chinh thuc" />
-
-          <div className="partner-line">
-            <div>
-              <p className="partner-info">
-                Luis Suárez &amp; OKVIP
-                <br />
-                Năm 2025 - 2026
-              </p>
-            </div>
-            <div className="partner-logos">
-              <img src="/assets/footer_images/suarez_sign.png" alt="Suarez badge" />
-              <div className="divider-vert"></div>
-              <img src="/assets/footer_images/logo-okvip.png" alt="OKVIP" />
-            </div>
-          </div>
-
-          <div className="partner-line">
-            <div>
-              <p className="partner-info">
-                Argentina AFA &amp; OKVIP
-                <br />
-                Năm 2023 - 2026
-              </p>
-            </div>
-            <div className="partner-logos">
-              <img src="/assets/footer_images/logo-afa.png" alt="AFA" />
-              <div className="divider-vert"></div>
-              <img src="/assets/footer_images/logo-okvip.png" alt="OKVIP" />
-            </div>
-          </div>
-
-          <div className="partner-line">
-            <div>
-              <p className="partner-info">
-                Villarreal CF &amp; OKVIP
-                <br />
-                Năm 2023 - 2026
-              </p>
-            </div>
-            <div className="partner-logos">
-              <img src="/assets/footer_images/logo-cvf.png" alt="Villarreal" />
-              <div className="divider-vert"></div>
-              <img src="/assets/footer_images/logo-okvip.png" alt="OKVIP" />
-            </div>
-          </div>
-
-          <div className="news-chip">
-            <img src="/assets/footer_images/title_partner.png" alt="Partner" />
-          </div>
-
-          <article className="news-card">
-            <div className="news-content">
-              <h3 className="news-title">Luis Suárez &amp; OKVIP</h3>
-              <p className="news-desc">
-                Luis Suárez, huyền thoại bóng đá với sự nghiệp rực rỡ cùng Liverpool và Barcelona,
-                đã chính thức trở thành đại sứ thương hiệu...
-                <a href="#" className="news-more">
-                  Xem thêm
-                </a>
-              </p>
-            </div>
-            <div className="news-thumb">
-              <img src="/assets/footer_images/sign_suarez.png" alt="Suarez OKVIP" />
-            </div>
-          </article>
-
-          <article className="news-card">
-            <div className="news-content">
-              <h3 className="news-title">Argentina AFA &amp; OKVIP</h3>
-              <p className="news-desc">
-                Hiệp hội Bóng đá Argentina (AFA) với nhiều danh hiệu World Cup và Copa América đã
-                chính thức hợp tác...
-                <a href="#" className="news-more">
-                  Xem thêm
-                </a>
-              </p>
-            </div>
-            <div className="news-thumb">
-              <img src="/assets/footer_images/sign_afa.png" alt="Argentina OKVIP" />
-            </div>
-          </article>
-
-          <article className="news-card">
-            <div className="news-content">
-              <h3 className="news-title">Villarreal CF &amp; OKVIP</h3>
-              <p className="news-desc">
-                Villarreal CF, đội bóng hàng đầu La Liga, nổi tiếng với lối chơi kỹ thuật và tinh
-                thần thi đấu kiên cường...
-                <a href="#" className="news-more">
-                  Xem thêm
-                </a>
-              </p>
-            </div>
-            <div className="news-thumb">
-              <img src="/assets/footer_images/sign_villa.png" alt="Villarreal OKVIP" />
-            </div>
-          </article>
         </div>
-
-        <div className="footer-logos">
-          <div className="footer-col-2">
-            <div className="footer-giayphep">
-              <h3 className="footer-title">giấy phép</h3>
+        <div className="w-full h-fit flex justify-between items-center">
+          <div className="w-[55%] h-[55px] flex flex-col items-start gap-2">
+            <p className="text-[#006719] text-[18px] font-normal not-italic leading-normal">Theo Dõi Chúng Tôi</p>
+            <div className="w-full h-full max-h-[25px] object-contain flex justify-start items-center gap-2">
               <img
-                src="/assets/footer_images/logo-giayphep1.png"
-                alt="giayphep-logo"
-                loading="lazy"
+                src="/assets/footer_images/fb.png"
+                alt=""
+                className="w-auto h-full object-contain cursor-pointer"
+                onClick={() => window.open("https://qq88.io/footer/fb", "_blank", "noopener,noreferrer")}
               />
               <img
-                src="/assets/footer_images/logo-giayphep2.png"
-                alt="giayphep-logo"
-                loading="lazy"
+                src="/assets/footer_images/ytb.png"
+                alt=""
+                className="w-auto h-full object-contain cursor-pointer"
+                onClick={() => window.open("https://qq88.io/footer/yt", "_blank", "noopener,noreferrer")}
               />
-            </div>
-            <div className="footer-baove">
-              <h3 className="footer-title">bảo vệ</h3>
-              <img src="/assets/footer_images/logo-baove1.png" alt="baove-logo" loading="lazy" />
-              <img src="/assets/footer_images/logo-baove2.png" alt="baove-logo" loading="lazy" />
+              <img
+                src="/assets/footer_images/tele.png"
+                alt=""
+                className="w-auto h-full object-contain cursor-pointer"
+                onClick={() => window.open("https://qq88.io/footer/tele", "_blank", "noopener,noreferrer")}
+              />
             </div>
           </div>
-          <div className="footer-col-2">
-            <div className="footer-sns">
-              <h3 className="footer-title">Theo Dõi Chúng Tôi</h3>
-              <div className="sns-list">
-                <a href="https://qq88.io/footer/fb" target="_blank" rel="noreferrer">
-                  <img src="/assets/footer_images/sns-fb.png" alt="Facebook" loading="lazy" />
-                </a>
-                <a href="https://qq88.io/footer/yt" target="_blank" rel="noreferrer">
-                  <img src="/assets/footer_images/sns-yt.png" alt="Youtube" loading="lazy" />
-                </a>
-                <a href="https://qq88.io/footer/tele" target="_blank" rel="noreferrer">
-                  <img src="/assets/footer_images/sns-tg.png" alt="Telegram" loading="lazy" />
-                </a>
-              </div>
-            </div>
-            <div className="footer-choi">
-              <h3 className="footer-title">chơi có trách nhiệm</h3>
-              <div className="choi-list">
-                <img src="/assets/footer_images/logo-choi1.png" alt="choi logo" loading="lazy" />
-                <img src="/assets/footer_images/logo-choi2.png" alt="choi logo" loading="lazy" />
-                <img src="/assets/footer_images/logo-choi3.png" alt="choi logo" loading="lazy" />
-              </div>
-            </div>
+          <div className="w-[45%] h-[55px] flex flex-col items-start gap-2">
+            <p className="text-[#006719] text-[18px] font-normal not-italic leading-normal">Chơi Có Trách Nhiệm</p>
+            <img src="/assets/footer_images/choicotrachnhiem.png" alt="" className="w-auto h-full max-h-[25px] object-contain" />
           </div>
         </div>
       </div>
+    </div>
     </div>
   );
 };
 
 export default Footer;
+
+
