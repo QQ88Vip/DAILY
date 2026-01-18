@@ -246,7 +246,7 @@ const Footer: React.FC = () => {
               <div className="footer-icons flex flex-nowrap">
                 <div className="max-w-[40px] w-auto my-auto">
                   <a href="">
-                    <img src="/assets/footer_images/1.png" alt="icon1" />
+                    <img src="/assets/footer_images/f1.png" alt="icon1" />
                   </a>
                 </div>
                 <div className="max-w-[40px] w-auto my-auto">
