@@ -21,13 +21,13 @@ const Footer: React.FC = () => {
 
   return (
     <div>
-      <div className="footer-pc hidden md:block">
+      <div className="footer-pc hidden md:block ">
         <div className="footer-main">
-          <div className="main-wrap pl-0 md:pl-5 flex-nowrap">
+          <div className="main-wrap flex-nowrap ">
             <div className="footer-intro-endorse -mx-0 md:-mx-2">
               <div className="footer-endorse">
                 <section className="ambassador-strip flex-col !justify-between md:flex-row !gap-0  items-stretch flex-nowrap ">
-                  <div className="w-auto max-w-[240px] lg:max-w-[35%]  flex items-start">
+                  <div className="w-auto lg:w-full  max-w-[240px] lg:max-w-[35%]  flex items-start">
                     {!isExpanded && (
                       <img
                         className=" w-auto h-auto object-contain"
@@ -45,7 +45,7 @@ const Footer: React.FC = () => {
                       />
                     )}
                   </div>
-                  <div className="w-auto lg:max-w-[20%]">
+                  <div className="w-auto lg:max-w-[25%]">
                     <div className="text-md lg:text-xl 2xl:text-2xl font-bold  text-[#006719] uppercase text-left">liên kết nhanh</div>
                     <div className="border-b border-[#006719] lg:py-2">
                       <a href="" className="flex items-center 2xlgap-2 ">
@@ -321,7 +321,7 @@ const Footer: React.FC = () => {
 
       <div className="footer-mb w-full block md:hidden flex flex-col justify-center items-start">
       <img src="/assets/footer_images/amba.png" alt="" className='w-full h-auto object-contain mx-1' />
-      <div className='w-full h-[15px] my-1 mx-1 flex justify-start items-center gap-2'>
+      <div className='w-full h-[15px] mb-4  mx-1 flex justify-start items-center gap-2'>
         <img src="/assets/footer_images/title.png" alt="" className='w-fit h-full object-contain' />
         <span
           className="text-[#006719] font-['Roboto',sans-serif] text-[16px] font-bold capitalize"
@@ -348,7 +348,7 @@ const Footer: React.FC = () => {
         />
       </div>
       
-      <div className="w-full h-auto py-1 mt-2 mx-1 flex flex-col justify-start items-start gap-4">
+      <div className="w-full h-auto pl-0.5 mt-2 mx-1 flex flex-col justify-start items-start gap-4">
         <div className="w-full h-fit flex justify-between items-center">
           <div className="w-[55%] h-[85px] flex flex-col items-start gap-2">
             <p className="text-[#006719] text-[18px] font-normal not-italic leading-normal">Giấy Phép</p>
