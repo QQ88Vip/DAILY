@@ -26,7 +26,7 @@ const Header: React.FC<HeaderProps> = ({ onToggleMenu }) => {
         </a>
       </div>
       <div className="header-actions-link">
-        <a href="https://t.me/KENHDAILYQQ88">
+        <a href="https://t.me/QQ88HOTRODAILY">
           <div className="header-actions-item">
             <img src="/assets/csdl.svg" alt="CSDL" />
             <span>Chăm sóc đại lý</span>
