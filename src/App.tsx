@@ -145,8 +145,8 @@ const App: React.FC = () => {
               </span>{" "}
               Tele hỗ trợ đại lý duy nhất của QQ88
               <br /> Liên hệ qua link :{" "}
-              <a href="https://t.me/QQ88HOTRODAILY" target="_blank" className="">
-                https://t.me/QQ88HOTRODAILY
+              <a href="https://t.me/KENHDAILYQQ88" target="_blank" className="">
+                https://t.me/KENHDAILYQQ88
               </a>{" "}
               <br /> Hãy chú ý các phương thức liên hệ khác đều là giả mạo. <br />
             </p>
@@ -154,7 +154,7 @@ const App: React.FC = () => {
         </div>
       ) : null}
       <div className="floating-icon">
-        <a href="https://t.me/QQ88HOTRODAILY" target="_blank">
+        <a href="https://t.me/KENHDAILYQQ88" target="_blank">
           <img src="assets/logo-tele.png" alt="Telegram" />
         </a>
       </div>
