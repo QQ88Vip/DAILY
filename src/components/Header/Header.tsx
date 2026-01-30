@@ -16,14 +16,12 @@ const Header: React.FC<HeaderProps> = ({ onToggleMenu }) => {
           <img src="/assets/logo.svg" alt="QQ88" />
         </a>
       </div>
-      <div className="header-logo-mobile">
+      <div className="header-logo-mobile" >
         <a href="#">
-          <img src="/assets/logo-mb.svg" alt="QQ88" />
+          <img src="/assets/logo-mb.svg" alt="QQ88" style={{paddingRight: '18px'}} />
         </a>
-        <div className="separator"></div>
-        <a href="#">
-          <img src="/assets/okvip.png" alt="OKVIP" />
-        </a>
+
+
       </div>
       <div className="header-actions-link">
         <a href="https://t.me/KENHDAILYQQ88">
