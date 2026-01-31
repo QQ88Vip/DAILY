@@ -109,8 +109,7 @@ const AgentCommission: React.FC = () => {
         <span className={styles.bold}>
           {" "}
           Đại lý Google SEO/ADS chạy từ khoá nội bộ của công ty mức hoa hồng cố định là 15%. (Từ
-          khóa nội bộ ví dụ: link mới QQ88, link QQ88 , Đăng nhập QQ88...). Ngoài ra nếu phát hiện
-          seo các từ khóa liên quan các web trong liên minh OKVIP cũng áp dụng mức hoa hồng 15%.
+          khóa nội bộ ví dụ: link mới QQ88, link QQ88 , Đăng nhập QQ88...). Ngoài ra các từ khóa liên quan đến các web đang và từng thuộc liên minh trước đây của QQ88, mức hoa hồng cũng sẽ áp dụng cố định 15%.
         </span>
         <br />
         <span className={styles.bold}>‒ Chương trình này không áp dụng với sản phẩm xổ số.</span>
