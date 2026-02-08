@@ -173,10 +173,13 @@
         color: #000000;
     }
 
+    .content__home__btn img{
+        margin: 0 auto;
+    }
+
     @media (max-width: 900px) {
         .content__home__btn img{
             max-width: 450px;
-            height: auto;
         }
 
         &__list {
@@ -199,6 +202,7 @@
             margin-top: 16px;
         }
         .content__home__btn{
+            margin: 0 auto;
             display: none !important;
         }
         .thunhap__list {
@@ -249,6 +253,7 @@
 
     @media (max-width: 600px) {
         .content__home__btn {
+            margin: 0 auto;
             display: none !important;
         }
 
