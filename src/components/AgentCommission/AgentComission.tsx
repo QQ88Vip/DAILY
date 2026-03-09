@@ -28,7 +28,8 @@ const ContentCalculator = () => {
   }, [totalWinLoss, totalRefund, totalPromotion, validMembers, newValidMembers]);
 
   const formatNumber = (num: number): string => {
-    return num.toLocaleString("vi-VN");
+    // Hiển thị 1,000,000 (dùng dấu phẩy để ngăn cách hàng nghìn)
+    return num.toLocaleString("en-US");
   };
 
   const parseNumber = (str: string): number => {
