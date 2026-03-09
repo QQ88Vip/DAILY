@@ -20,7 +20,7 @@ const ContentCalculator = () => {
 
   // State cho modal chi tiết
   const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
-  const [isOpen, setIsOpen] = useState<boolean>(true);
+  const [isOpen, setIsOpen] = useState<boolean>(false);
 
   // Tính toán khi thay đổi input
   useEffect(() => {
