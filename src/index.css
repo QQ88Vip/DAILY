@@ -1,66 +1,112 @@
 /* Reset lại style global để không ảnh hưởng đến layout custom */
 @import "tailwindcss";
-:root {
-  font-family: 'Roboto', sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-  color-scheme: light;
-  color: #222;
-  background-color: #fff;
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+
+@layer base {
+  :root {
+    font-family: "Roboto", sans-serif;
+    line-height: 1.5;
+    font-weight: 400;
+    color-scheme: light;
+    color: #222;
+    background-color: #fff;
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    margin: 0;
+    min-width: 320px;
+    min-height: 100vh;
+    background: #fff;
+    color: #222;
+    font-family: "Roboto", sans-serif;
+    display: block;
+  }
+
+  button,
+  a,
+  input,
+  textarea {
+    font-family: inherit;
+    color: inherit;
+    background: none;
+    border: none;
+    outline: none;
+    box-shadow: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  button {
+    cursor: pointer;
+    background: none;
+    border: none;
+    border-radius: 0;
+    padding: 0;
+    font-size: inherit;
+    font-weight: inherit;
+    transition: none;
+  }
+
+  /* Không style mặc định cho a */
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p {
+    margin: 0;
+    font-weight: inherit;
+  }
 }
 
-body {
-  margin: 0;
-  min-width: 320px;
-  min-height: 100vh;
-  background: #fff;
-  color: #222;
-  font-family: 'Roboto', sans-serif;
-  display: block;
-}
+@layer components {
+  input[type="range"].range-custom {
+    -webkit-appearance: none;
+    appearance: none;
+    height: 8px;
+    border-radius: 9999px;
+    accent-color: #0a662f;
+  }
 
-button,
-a,
-input,
-textarea {
-  font-family: inherit;
-  color: inherit;
-  background: none;
-  border: none;
-  outline: none;
-  box-shadow: none;
-  padding: 0;
-  margin: 0;
-}
+  input[type="range"].range-custom::-webkit-slider-runnable-track {
+    height: 8px;
+    border-radius: 9999px;
+    background: rgba(10, 102, 47, 0.2);
+  }
 
-button {
-  cursor: pointer;
-  background: none;
-  border: none;
-  border-radius: 0;
-  padding: 0;
-  font-size: inherit;
-  font-weight: inherit;
-  transition: none;
-}
+  input[type="range"].range-custom::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 16px;
+    height: 16px;
+    border-radius: 9999px;
+    background: #0a662f;
+    border: 3px solid #fff;
+    box-shadow: 0 0 0 2px rgba(10, 102, 47, 0.25);
+    margin-top: -4px;
+  }
 
-/* Không style mặc định cho a */
-a {
-  text-decoration: none;
-  color: inherit;
-}
+  input[type="range"].range-custom::-moz-range-track {
+    height: 8px;
+    border-radius: 9999px;
+    background: rgba(10, 102, 47, 0.2);
+  }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p {
-  margin: 0;
-  font-weight: inherit;
+  input[type="range"].range-custom::-moz-range-thumb {
+    width: 16px;
+    height: 16px;
+    border-radius: 9999px;
+    background: #0a662f;
+    border: 3px solid #fff;
+    box-shadow: 0 0 0 2px rgba(10, 102, 47, 0.25);
+  }
 }
