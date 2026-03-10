@@ -154,7 +154,7 @@ const App: React.FC = () => {
         </div>
       ) : null}
       <div className="floating-icon">
-        <a href="https://t.me/KENHDAILYQQ88" target="_blank">
+        <a href="https://t.me/QQ88DAILY" target="_blank">
           <img src="assets/logo-tele.png" alt="Telegram" />
         </a>
       </div>
