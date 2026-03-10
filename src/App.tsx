@@ -145,8 +145,8 @@ const App: React.FC = () => {
               </span>{" "}
               Tele hỗ trợ đại lý duy nhất của QQ88
               <br /> Liên hệ qua link :{" "}
-              <a href="https://t.me/KENHDAILYQQ88" target="_blank" className="">
-                https://t.me/KENHDAILYQQ88
+              <a href="https://t.me/QQ88DAILY" target="_blank" className="">
+                https://t.me/QQ88DAILY
               </a>{" "}
               <br /> Hãy chú ý các phương thức liên hệ khác đều là giả mạo. <br />
             </p>
