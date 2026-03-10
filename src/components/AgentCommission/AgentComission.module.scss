@@ -15,6 +15,12 @@
     margin-bottom: 8px;
   }
 
+.divider {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 12px;
+}
+
 $table-border: #0a662f;
 $table-bg: #f3fff5;
 $header-bg: #0a662f;
