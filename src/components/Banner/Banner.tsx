@@ -36,13 +36,13 @@ const Banner: React.FC = () => {
           <div className="marquee-wrapper">
             <div ref={marqueeRef} className={`marquee-track${shouldAnimate ? " animated" : ""}`}>
               <span className="marquee">
-                Link tổng chính thức của chúng tôi là: https://qq88c.online/ ( PC ), 52999.com (
+                Link tổng chính thức của chúng tôi là: https://qq88ok6.com ( PC ), 52999.com (
                 Mobile ) ✅ Hotline: 0908667888 ✅ Gmail: admin@QQ88.com CÙNG QQ88 - HỢP TÁC PHÁT
                 TRIỂN TƯƠNG LAI
               </span>
               <span>{"        "}</span>
               <span className="marquee">
-                Link tổng chính thức của chúng tôi là: https://qq88c.online/ ( PC ), 52999.com (
+                Link tổng chính thức của chúng tôi là: https://qq88ok6.com ( PC ), 52999.com (
                 Mobile ) ✅ Hotline: 0908667888 ✅ Gmail: admin@QQ88.com CÙNG QQ88 - HỢP TÁC PHÁT
                 TRIỂN TƯƠNG LAI
               </span>
